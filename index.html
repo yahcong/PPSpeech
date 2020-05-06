@@ -13,12 +13,11 @@
 <br>
 <h4 style='display:inline'>Abstract: </h4> <p style='display:inline'> Current end-to-end autoregressive TTS systems (e.g. Tacotron 2) have outperformed traditional parallel approaches on the quality of synthesized speech. However, they introduce new problems at the same time. Due to the autoregressive nature, the time cost of inference has to be proportional to the length of text, which pose a great challenge for online serving. On the other hand, the style of synthetic speech becomes unstable and may change obviously among sentences. In this paper, we propose a Phrase based Parallel End-to-End TTS System (PPSpeech) to address these issues. PPSpeech uses autoregression approach within a phrase and executes parallel strategies for different phrases. By this method, we can achieve both high quality and high efficiency. In addition, we propose acoustic embedding and text context embedding as the conditions of encoder to keep successive and prevent from abrupt style or timbre change. Experiments show that, the synthesis speed of PPSpeech is much faster than sentence level autoregressive Tacotron 2 when a sentence has more than 5 phrases. The speed advantage increases with the growth of sentence length. Subjective experiments show that the proposed system with acoustic embedding and context embedding as conditions can make the style transition across sentences gradient and natural, defeating Global Style Token (GST) obviously in MOS.</p>
 
-
 <hr>
 <p><strong>Note:</strong> Please ensure your web browser supports wav audio format. You can choose Microsoft Edge, Google Chrome, Firefox, Opera and Safari.</p>
 <p>&nbsp;</p>
 <h3>Phrase-Level-Tacotron2, PhraseLevel-Tacotron2-GST and PPSpeech.</h3>
-<p>Here we again condition a GST-augmented Tacotron with individual Style Tokens. Note that these short web search phrases are completely different than the long-form audiobook phrases above, demonstrating that GSTs control style independently of the text domain.</p>
+<p>The following samples compare synthesis from a baseline phrase level Tacotron2 ,a phrase level Tacotron 2 TTS system with GST condition and our PPSpeech system. Note how the context embedding and acoustic embedding often leads to stabel, clearer and more expressive speech.</p>
 
 <table width="81%" border="1">
   <tbody>
@@ -31,76 +30,76 @@
 	
     <tr>
       <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/Recording1.wav" type="audio/wav">
+        <source src="audio/Recording1-1.wav" type="audio/wav">
       </audio></td>
       <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/DNN1.wav" type="audio/wav">
+        <source src="audio/Phrase-Level-Tacotron21-1.wav" type="audio/wav">
       </audio></td>
       <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/Fastspeech1.wav" type="audio/wav">
+        <source src="audio/PhraseLevel-Tacotron2-GST1-1.wav" type="audio/wav">
       </audio></td>
-	  <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/Fastspeech1.wav" type="audio/wav">
+      <td width="26%" style="text-align: center"><audio controls>
+        <source src="audio/PPSpeech1-1.wav" type="audio/wav">
       </audio></td>
     </tr>
 
     <tr>
       <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/Recording2.wav" type="audio/wav">
+        <source src="audio/Recording1-2.wav" type="audio/wav">
       </audio></td>
       <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/DNN2.wav" type="audio/wav">
+        <source src="audio/Phrase-Level-Tacotron21-2.wav" type="audio/wav">
       </audio></td>
       <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/Fastspeech2.wav" type="audio/wav">
+        <source src="audio/PhraseLevel-Tacotron2-GST1-2.wav" type="audio/wav">
       </audio></td>
 	  <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/Fastspeech2.wav" type="audio/wav">
+        <source src="audio/PPSpeech1-2.wav" type="audio/wav">
       </audio></td>
     </tr>
 
     <tr>
       <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/Recording3.wav" type="audio/wav">
+        <source src="audio/Recording1-3.wav" type="audio/wav">
       </audio></td>
       <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/DNN3.wav" type="audio/wav">
+        <source src="audio/Phrase-Level-Tacotron21-3.wav" type="audio/wav">
       </audio></td>
       <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/Fastspeech3.wav" type="audio/wav">
+        <source src="audio/PhraseLevel-Tacotron2-GST1-3.wav" type="audio/wav">
       </audio></td>
 	  <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/Fastspeech2.wav" type="audio/wav">
+        <source src="audio/PPSpeech1-3.wav" type="audio/wav">
       </audio></td>
     </tr>
 
     <tr>
       <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/Recording4.wav" type="audio/wav">
+        <source src="audio/Recording1-4.wav" type="audio/wav">
       </audio></td>
       <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/DNN4.wav" type="audio/wav">
+        <source src="audio/Phrase-Level-Tacotron21-4.wav" type="audio/wav">
       </audio></td>
       <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/Fastspeech4.wav" type="audio/wav">
+        <source src="audio/PhraseLevel-Tacotron2-GST1-4.wav" type="audio/wav">
       </audio></td>
 	  <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/Fastspeech2.wav" type="audio/wav">
+        <source src="audio/PPSpeech1-4.wav" type="audio/wav">
       </audio></td>
     </tr>
 
     <tr>
       <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/Recording5.wav" type="audio/wav">
+        <source src="audio/Recording1-5.wav" type="audio/wav">
       </audio></td>
       <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/DNN5.wav" type="audio/wav">
+        <source src="audio/Phrase-Level-Tacotron21-5.wav" type="audio/wav">
       </audio></td>
       <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/Fastspeech5.wav" type="audio/wav">
+        <source src="audio/PhraseLevel-Tacotron2-GST1-5.wav" type="audio/wav">
       </audio></td>
 	  <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/Fastspeech2.wav" type="audio/wav">
+        <source src="audio/PPSpeech1-5.wav" type="audio/wav">
       </audio></td>
     </tr>
 	
@@ -109,57 +108,57 @@
 
 <p>&nbsp;</p>
 <h3>PPSpeech vs. Tacotron 2</h3>
-<p>Here we again condition a GST-augmented Tacotron with individual Style Tokens. Note that these short web search phrases are completely different than the long-form audiobook phrases above, demonstrating that GSTs control style independently of the text domain.</p>
+<p>The following samples compare synthesis from a baseline sentence level Tacotron2 vs. our phrase level PPSpeech system.</p>
 
 <table width="81%" border="1">
   <tbody>
     <tr>
-      <th width="22%" style="text-align: center" scope="col">PPSpeech</th>
-      <th width="26%" style="text-align: center" scope="col">Sentence-Level-Tacotron2</th>
+      <th width="22%" style="text-align: center" scope="col">Sentence-Level-Tacotron2</th>
+      <th width="26%" style="text-align: center" scope="col">PPSpeech</th>
     </tr>
 	
     <tr>
       <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/Recording1.wav" type="audio/wav">
+        <source src="audio/Sentence-Level-Tacotron22-1.wav" type="audio/wav">
       </audio></td>
       <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/DNN1.wav" type="audio/wav">
-      </audio></td>
-    </tr>
-
-    <tr>
-      <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/Recording2.wav" type="audio/wav">
-      </audio></td>
-      <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/DNN2.wav" type="audio/wav">
+        <source src="audio/PPSpeech2-1.wav" type="audio/wav">
       </audio></td>
     </tr>
 
     <tr>
       <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/Recording3.wav" type="audio/wav">
+        <source src="audio/Sentence-Level-Tacotron22-2.wav" type="audio/wav">
       </audio></td>
       <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/DNN3.wav" type="audio/wav">
-      </audio></td>
-    </tr>
-
-    <tr>
-      <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/Recording4.wav" type="audio/wav">
-      </audio></td>
-      <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/DNN4.wav" type="audio/wav">
+        <source src="audio/PPSpeech2-2.wav" type="audio/wav">
       </audio></td>
     </tr>
 
     <tr>
       <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/Recording5.wav" type="audio/wav">
+        <source src="audio/Sentence-Level-Tacotron22-3.wav" type="audio/wav">
       </audio></td>
       <td width="26%" style="text-align: center"><audio controls>
-        <source src="audio/DNN5.wav" type="audio/wav">
+        <source src="audio/PPSpeech2-3.wav" type="audio/wav">
+      </audio></td>
+    </tr>
+
+    <tr>
+      <td width="26%" style="text-align: center"><audio controls>
+        <source src="audio/Sentence-Level-Tacotron22-4.wav" type="audio/wav">
+      </audio></td>
+      <td width="26%" style="text-align: center"><audio controls>
+        <source src="audio/PPSpeech2-4.wav" type="audio/wav">
+      </audio></td>
+    </tr>
+
+    <tr>
+      <td width="26%" style="text-align: center"><audio controls>
+        <source src="audio/Sentence-Level-Tacotron22-5.wav" type="audio/wav">
+      </audio></td>
+      <td width="26%" style="text-align: center"><audio controls>
+        <source src="audio/PPSpeech2-5.wav" type="audio/wav">
       </audio></td>
     </tr>
 	
